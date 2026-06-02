@@ -8,7 +8,7 @@ public class Sesion {
         return usuarioActual;
     }
 
-    public static User setUsuarioActual(User usuarioActual){
+    public static void setUsuarioActual(User usuarioActual){
         Sesion.usuarioActual = usuarioActual;
     }
 

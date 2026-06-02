@@ -29,9 +29,10 @@ public class LoginController {
     @FXML
     private Button btnLogin;
 
+    @FXML
     public void handleLogin(ActionEvent event) throws IOException {
 
-        String email =  txtEmail.getText();
+        String email = txtEmail.getText();
         String password = txtPassword.getText();
 
         User usuario = UserDAO.authenticate(email, password);

@@ -97,9 +97,7 @@ public class DashboardController {
 
     @FXML
     public void handleDelete(ActionEvent event) {
-        if (validarFormulario().isEmpty()) {
-            int id = txtId;
-        }
+
     }
 
     private String validarFormulario() {

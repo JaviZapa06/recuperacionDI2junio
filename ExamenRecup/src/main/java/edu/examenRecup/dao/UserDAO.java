@@ -12,6 +12,14 @@ import java.util.List;
 
 public class UserDAO {
 
+    private static int id;
+    private static String nombre;
+    private static String nickname;
+    private static String email;
+    private static int edad;
+    private static String password;
+    private static Role role;
+
     public static User authenticate(String email, String password) {
         String sql = "SELECT * FROM usuarios WHERE email = ? AND password = ?";
         try (Connection conn = DatabaseConnection.getConnection();
