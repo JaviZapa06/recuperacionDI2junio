@@ -32,7 +32,8 @@
         <Label fx:id="lblError"
                style="-fx-text-fill:red; "/>
 
-        <Button text="Login"
+        <Button fx:id="btnLogin"
+                text="Login"
                 onAction="#handleLogin"
                 prefWidth="120"/>
     </VBox>

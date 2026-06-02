@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.examenRecup.controller."
+            prefHeight="150.0" prefWidth="150.0">
+
+    <Label fx:id="lblNombre"/>
+    <Label fx:id="lblNickname"/>
+    <Label fx:id="lblEmail"/>
+    <Label fx:id="lblEdad"/>
+    <Label fx:id="lblRole"/>
+
+</AnchorPane>

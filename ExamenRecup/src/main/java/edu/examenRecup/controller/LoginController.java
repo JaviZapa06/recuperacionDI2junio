@@ -1,12 +1,19 @@
 package edu.examenRecup.controller;
 
 import edu.examenRecup.dao.UserDAO;
+import edu.examenRecup.model.Sesion;
 import edu.examenRecup.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class LoginController {
 
@@ -19,7 +26,10 @@ public class LoginController {
     @FXML
     private Label lblError;
 
-    public void handleLogin(ActionEvent event) {
+    @FXML
+    private Button btnLogin;
+
+    public void handleLogin(ActionEvent event) throws IOException {
 
         String email =  txtEmail.getText();
         String password = txtPassword.getText();
@@ -28,6 +38,13 @@ public class LoginController {
 
         if (usuario == null) {
             lblError.setText("Invalid email or password");
+            return;
         }
+
+        Sesion.setUsuarioActual(usuario);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+        Stage stage = (Stage) btnLogin.getScene().getWindow();
+        stage.setScene(new Scene(fxmlLoader.load()));
+
     }
 }
