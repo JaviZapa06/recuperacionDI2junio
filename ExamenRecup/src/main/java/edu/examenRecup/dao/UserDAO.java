@@ -121,7 +121,7 @@ public class UserDAO {
     }
 
     private static User extractUserFromResultSet(ResultSet rs) throws SQLException {
-        User user = new User();
+        User user = new User(id, nombre, nickname, email, edad, password, role);
         user.setId(rs.getInt("id"));
         user.setNombre(rs.getString("nombre"));
         user.setNickname(rs.getString("nickname"));
