@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.examenRecup.controller.LoginController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox   alignment="CENTER"
+            spacing="15.0"
+            AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.topAnchor="0.0"
+            AnchorPane.rightAnchor="0.0">
+
+        <Label text="User Login"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+        <Label text="Email:"/>
+        <TextField fx:id="txtEmail"
+                   maxWidth="250"/>
+
+        <Label text="Password:"/>
+        <PasswordField fx:id="txtPassword"
+                       maxWidth="250"/>
+
+        <Label fx:id="lblError"
+               style="-fx-text-fill:red; "/>
+
+        <Button text="Login"
+                onAction="#handleLogin"
+                prefWidth="120"/>
+    </VBox>
+</AnchorPane>
